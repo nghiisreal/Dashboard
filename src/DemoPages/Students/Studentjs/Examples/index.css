@@ -38,10 +38,22 @@
     font-weight: bold;
 }
 #selectyear{
-    margin-left: 250px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
     height: 30px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #FFC1CE;
+    color: black;
+    opacity: 0.5;
 }
-
+#selectyear option:hover{
+    background-color: blue;
+}
+.canvas{
+    height:300px;
+}
 .Barchart-main{
     position: absolute;
     top: 0;
