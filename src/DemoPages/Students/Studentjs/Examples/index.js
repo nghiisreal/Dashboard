@@ -70,6 +70,7 @@ const data = [
   { name: "Page F", uv: 3, pv: 7, amt: 2500 },
   { name: "Page G", uv: 2, pv: 8, amt: 2100 },
   { name: "Page C", uv: 1, pv: 9, amt: 2290 },
+  
 ];
 
 const data2 = [
@@ -79,35 +80,7 @@ const data2 = [
   { name: "Page D", uv: 7.5, pv: 7.5, amt: 3200 },
   { name: "Page E", uv: 7.6, pv: 7.6, amt: 6218 },
 ];
-const data4 ={
-  labels: ['January', 'February', 'March', 'April', 'May'],
-  datasets: [
-      {
-          backgroundColor: 'rgba(255,99,132,0.2)',
-          borderColor: 'rgba(255,99,132,1)',
-          borderWidth: 0.5,
-          hoverBackgroundColor: 'rgba(255,99,132,0.4)', 
-          hoverBorderColor: 'rgba(255,99,132,1)',
-          borderCapStyle: 'round',
-          data: [3.5, 7, 5, 7.5, 7.6]
-      }
-  ]
-};
-// {
-//   labels: ['January', 'February', 'March', 'April', 'May'],
-//   datasets: [
-//       {
-//           backgroundColor: 'rgba(255,99,132,0.2)',
-//           borderColor: 'rgba(255,99,132,1)',
-//           borderWidth: 0.5,
-//           hoverBackgroundColor: 'rgba(255,99,132,0.4)', 
-//           hoverBorderColor: 'rgba(255,99,132,1)',
-//           borderCapStyle: 'round',
-//           data: [1, 1, 1, 1, 1]
-//       }
-//   ]
-// }
-// ]
+
 export default class AnalyticsDashboard1 extends Component {
   constructor() {
     super();
@@ -470,6 +443,7 @@ export default class AnalyticsDashboard1 extends Component {
                                 fill="#81a4ff"
                                 stroke="#3f6ad8"
                                 strokeWidth={2}
+                               
                               />
                             </BarChart>
                           </ResponsiveContainer>
@@ -499,7 +473,6 @@ export default class AnalyticsDashboard1 extends Component {
                               
                                 fill="#2FC9EB"
                                 stroke="#3f6ad8"
-                                
                               />
                             </AreaChart>
                           </ResponsiveContainer>
