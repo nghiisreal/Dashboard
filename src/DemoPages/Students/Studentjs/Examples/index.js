@@ -6,6 +6,9 @@ import { Doughnut } from "react-chartjs-2";
 // import {Bar} from "react-chartjs-2";
 import Selects from './Select';
 import "./index.css";
+import { Chart } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+
 import {
   Row,
   Col,
@@ -32,6 +35,8 @@ import {
   CartesianGrid,
   Tooltip,
   LineChart,
+  XAxis,
+  YAxis,
 } from "recharts";
 
 import {
@@ -47,7 +52,7 @@ const data3 = {
   labels: ["Đã học", "chưa học","còn nợ"],
   datasets: [
     {
-      data: [56, 73,0],
+      data: [100, 15, 9],
       backgroundColor: [
         '#8dace7',
         '#71deb9',
@@ -61,6 +66,7 @@ const data3 = {
     },
   ],
 };
+
 const data = [
   { name: "Page A", uv: 9, pv: 1, amt: 2400 },
   { name: "Page B", uv: 8, pv: 3, amt: 2210 },
@@ -70,7 +76,6 @@ const data = [
   { name: "Page F", uv: 3, pv: 7, amt: 2500 },
   { name: "Page G", uv: 2, pv: 8, amt: 2100 },
   { name: "Page C", uv: 1, pv: 9, amt: 2290 },
-  
 ];
 
 const data2 = [
@@ -80,7 +85,11 @@ const data2 = [
   { name: "Page D", uv: 7.5, pv: 7.5, amt: 3200 },
   { name: "Page E", uv: 7.6, pv: 7.6, amt: 6218 },
 ];
-
+// Chart.register(ChartDataLabels);
+// Chart.defaults.set('plugins.datalabels', {
+//     anchor: 'center',
+//     align: 'bottom',
+// })
 export default class AnalyticsDashboard1 extends Component {
   constructor() {
     super();
@@ -384,6 +393,7 @@ export default class AnalyticsDashboard1 extends Component {
                                 stroke="#3f6ad8"
                                 strokeWidth={2}
                               />
+                              <XAxis dataKey="uv" />
                             </BarChart>
                           </ResponsiveContainer>
                         </div>
@@ -443,8 +453,8 @@ export default class AnalyticsDashboard1 extends Component {
                                 fill="#81a4ff"
                                 stroke="#3f6ad8"
                                 strokeWidth={2}
-                               
                               />
+                              <XAxis dataKey="uv" />
                             </BarChart>
                           </ResponsiveContainer>
                         </div>
@@ -467,13 +477,14 @@ export default class AnalyticsDashboard1 extends Component {
                         <div className="widget-chart-wrapper position-relative">
                           <ResponsiveContainer height={65}>
                             <AreaChart data={data}
-                            margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
+                            margin={{ top: 0, right: 0, left: 5, bottom: 0 }}
                             >
                               <Area type='stepAfter' dataKey='uv'
                               
                                 fill="#2FC9EB"
                                 stroke="#3f6ad8"
                               />
+                              <XAxis dataKey="uv" />
                             </AreaChart>
                           </ResponsiveContainer>
                         </div>
