@@ -68,14 +68,14 @@ const data3 = {
 };
 
 const data = [
-  { name: "Page A", uv: 9, pv: 1, amt: 2400 },
-  { name: "Page B", uv: 8, pv: 3, amt: 2210 },
-  { name: "Page C", uv: 6, pv: 4, amt: 2290 },
-  { name: "Page D", uv: 5, pv: 5, amt: 2000 },
-  { name: "Page E", uv: 4, pv: 6, amt: 2181 },
-  { name: "Page F", uv: 3, pv: 7, amt: 2500 },
-  { name: "Page G", uv: 2, pv: 8, amt: 2100 },
-  { name: "Page C", uv: 1, pv: 9, amt: 2290 },
+  { name: "Page A", uv: 9, pv: 5000, amt: 2400 },
+  { name: "Page B", uv: 8, pv: 6000, amt: 2210 },
+  { name: "Page C", uv: 6, pv: 7000, amt: 2290 },
+  { name: "Page D", uv: 5, pv: 8000, amt: 2000 },
+  { name: "Page E", uv: 4, pv: 9000, amt: 2181 },
+  { name: "Page F", uv: 3, pv: 10000, amt: 2500 },
+  { name: "Page G", uv: 2, pv: 11000, amt: 2100 },
+  { name: "Page C", uv: 1, pv: 12000, amt: 2290 },
 ];
 
 const data2 = [
@@ -136,7 +136,7 @@ export default class AnalyticsDashboard1 extends Component {
                     </CardHeader>
                     <TabContent activeTab={this.state.activeTab1}>
                       <TabPane tabId="11">
-                        <CardBody className="pt-2">
+                        <CardBody className="pt-3 pb-5">
                           <Row className="mt-3">
                             <Col md="3" className="p-0">
                               <div className="widget-content-outer">
@@ -446,15 +446,15 @@ export default class AnalyticsDashboard1 extends Component {
                           </div>
                         </div>
                         <div className="widget-chart-wrapper chart-wrapper-relative">
-                          <ResponsiveContainer height={50}>
+                          <ResponsiveContainer height={91}>
                             <BarChart data={data}>
                               <Bar
-                                dataKey="uv"
+                                dataKey="pv"
                                 fill="#81a4ff"
                                 stroke="#3f6ad8"
                                 strokeWidth={2}
                               />
-                              <XAxis dataKey="uv" />
+                              <XAxis dataKey="pv" />
                             </BarChart>
                           </ResponsiveContainer>
                         </div>
@@ -475,7 +475,7 @@ export default class AnalyticsDashboard1 extends Component {
                           </div>
                         </div>
                         <div className="widget-chart-wrapper position-relative">
-                          <ResponsiveContainer height={65}>
+                          <ResponsiveContainer height={106}>
                             <AreaChart data={data}
                             margin={{ top: 0, right: 0, left: 5, bottom: 0 }}
                             >

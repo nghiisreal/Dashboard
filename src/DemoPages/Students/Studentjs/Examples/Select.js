@@ -4,6 +4,11 @@ import { ResponsiveContainer } from "recharts";
 import { data1 } from "./list";
 import { Chart } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+Chart.register(ChartDataLabels);
+Chart.defaults.set('plugins.datalabels', {
+    // anchor: 'end',
+    align: 'end',
+})
 const Select = () => {
     const [select, setSelect] = useState(data1[0]);
     const onChangeDropdown = (e) => {
@@ -30,7 +35,7 @@ const Select = () => {
                     </option>
                 ))}
             </select>
-            <div class="divider mt-4"></div>
+            <div class="divider mt-2"></div>
             <div className="widget-chart-wrapper chart-wrapper-relative">
                 <ResponsiveContainer className="responsive" height={300} width="90%" aspect={3.0 / 1.5}>
                     {select ? (
@@ -41,7 +46,7 @@ const Select = () => {
                             options={{
                                 maintainAspectRatio: true,
                             }}
-                            // plugins = {[ChartDataLabels]}
+                            plugins = {[ChartDataLabels]}
                         />
                     ) : (
                         ""
